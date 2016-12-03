@@ -1,0 +1,256 @@
+/*******************************
+            Global
+********************************/
+
+body {
+    margin: 0
+}
+
+/*******************************
+            Navigation
+********************************/
+nav.site-nav > ul {
+    margin: 0;
+    float: right;
+    list-style: none
+}
+
+.site-nav ul li {
+    float: left
+}
+
+.site-nav ul li a {
+    float: left;
+    margin: 0;
+    padding: 0 8px 0 5px
+}
+
+/* DropDown */
+.dropbtn {
+    display: none;
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+    border-bottom: 17px double #669933; 
+    border-top: 6px solid #669933;
+    height: 5px; 
+    width: 30px
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    top: 50px;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display:block;
+}
+
+
+/* MDROPDOWN-MENU <-----------------------------------@ 590px */
+@media screen and (max-width: 590px) {
+    .site-nav ul {
+        display: none
+    }
+    .dropbtn {
+        display: inline-block
+    }
+}
+
+
+
+
+/**============== HERO ================**/
+.hero-image {
+    background: url(images/hero-bg.gif) no-repeat center top fixed;
+    background-size: cover;
+    position: relative
+}
+
+.hero-overlay {
+    background: rgba(7, 133, 242, 0.5)
+}
+
+.cl-container {
+    max-width: 1170px;
+    margin: 0 auto
+}
+
+.image-frame {
+    position: relative
+}
+
+.image-frame>div,.image-frame img {
+    position: absolute
+}
+
+#el1 {
+    top: 230px;
+    right: 105px
+}
+
+#el2 {
+    top: 35px;
+    left: 435px
+}
+
+#cl-up-left {
+    left: 190px;
+    top: 75px
+}
+
+#cl-left {
+    left: 15px;
+    top: 235px
+}
+
+#cl-top {
+    top: 0px;
+    left: 440px
+}
+
+#cl-up-right {
+    top: 120px;
+    right: 175px;
+    width: 300px
+}
+
+#cl-right {
+    right: 15px;
+    top: 235px;
+    width: 400px
+}
+
+#cl-logo {
+    top: 180px;
+    left: 320px;
+    position: absolute;
+    width: 330px
+}
+
+#el9 {
+    top: 200px;
+    left: 30px
+}
+
+/* cloud's nav links*/
+a.cl-link {
+    text-decoration: none;
+    position: relative;
+    font-size: 40px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 2px solid #3fa9f4;
+    background-color: #fff;
+    color: #0785f2
+}
+
+a.cl-link:hover {
+    background-color: #3fa9f4;
+    color: #fff
+}
+
+#cl-right a.cl-link {
+    top: 105px;
+    left: 100px
+}
+
+#cl-top a.cl-link {
+    top: 105px;
+    left: 82px
+}
+
+#cl-up-right a.cl-link {
+    top: 68px;
+    left: 89px
+}
+
+#cl-left a.cl-link {
+    top: 105px;
+    left: 126px
+}
+
+#cl-up-left a.cl-link {
+    top: 95px;
+    left: 102px
+}
+/* sail animation */
+.cl-animated {
+    -webkit-animation-duration: 50s;
+    animation-duration: 50s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {-webkit-transform: translateX(0)}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-50px)}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(50px)}
+}
+@keyframes sail {
+    0%, 100% {transform: translateX(0)}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-50px)}
+    20%, 40%, 60%, 80% {transform: translateX(50px)}
+}
+.sail {
+    -webkit-animation-name: sail;
+    animation-name: sail
+}
+
+.sail:hover {
+    animation-play-state: paused
+}
+
+.mobile-logo {
+    display: none;
+    margin: 0 auto
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-logo {
+        display: block
+    }
+    .fixed-height {
+        height: 740px
+    }
+}
+
+
+/* animation delay */
+.delay05 {
+    animation-delay: 1.5s
+}
+
+.delay10 {
+    -moz-animation-delay: 2.5s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+.delay15 {
+    animation-delay: 3.5s
+}
+
+.delay20 {
+    animation-delay: 4s
+}
