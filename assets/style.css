@@ -3,15 +3,30 @@
 ********************************/
 
 body {
+    font: 14px/20px 'Liberation Sans', 'Helvetica Neue', sans-serif;
     margin: 0
+}
+
+a {
+    outline: none
 }
 
 /*******************************
             Navigation
 ********************************/
-nav.site-nav > ul {
-    margin: 0;
+.site-nav::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.nav-logo {
+    margin: 10px
+}
+
+.site-nav > ul {
     float: right;
+    margin: 25px 15px;
     list-style: none
 }
 
@@ -22,17 +37,49 @@ nav.site-nav > ul {
 .site-nav ul li a {
     float: left;
     margin: 0;
-    padding: 0 8px 0 5px
+    padding: 0 8px 0 5px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 0 0 10px #444;
+    transition: text-shadow .2s ease-in-out;
+    text-decoration: none
+}
+
+.site-nav ul li a:hover {
+    text-shadow: none
+}
+
+.site-nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin-top: 3px;
+    height: 2px;
+    background: #fff;
+    transition: width .3s ease-in-out
+}
+
+.site-nav ul li a:hover::after {
+    width: 100%
+}
+
+.site-nav ul li.active>a::after {
+    width: 100%
+}
+
+.active>a {
+    text-shadow: none !important
 }
 
 /* DropDown */
 .dropbtn {
     display: none;
     float: right;
-    margin: 10px;
+    margin: 15px;
     cursor: pointer;
-    border-bottom: 17px double #669933; 
-    border-top: 6px solid #669933;
+    border-bottom: 17px double #fff; 
+    border-top: 6px solid #fff;
     height: 5px; 
     width: 30px
 }
@@ -62,7 +109,6 @@ nav.site-nav > ul {
     display:block;
 }
 
-
 /* MDROPDOWN-MENU <-----------------------------------@ 590px */
 @media screen and (max-width: 590px) {
     .site-nav ul {
@@ -73,10 +119,15 @@ nav.site-nav > ul {
     }
 }
 
+/*******************************
+        Cloud animation
+********************************/
+.cl-container {
+    max-width: 1170px;
+    clear: both;
+    margin: 0 auto
+}
 
-
-
-/**============== HERO ================**/
 .hero-image {
     background: url(images/hero-bg.gif) no-repeat center top fixed;
     background-size: cover;
@@ -84,30 +135,16 @@ nav.site-nav > ul {
 }
 
 .hero-overlay {
-    background: rgba(7, 133, 242, 0.5)
+    background: rgba(7, 133, 242, 0.6)
 }
 
-.cl-container {
-    max-width: 1170px;
-    margin: 0 auto
-}
 
-.image-frame {
+#image-frame {
     position: relative
 }
 
-.image-frame>div,.image-frame img {
+#image-frame>div,#image-frame img {
     position: absolute
-}
-
-#el1 {
-    top: 230px;
-    right: 105px
-}
-
-#el2 {
-    top: 35px;
-    left: 435px
 }
 
 #cl-up-left {
@@ -144,16 +181,11 @@ nav.site-nav > ul {
     width: 330px
 }
 
-#el9 {
-    top: 200px;
-    left: 30px
-}
-
 /* cloud's nav links*/
 a.cl-link {
     text-decoration: none;
     position: relative;
-    font-size: 40px;
+    font-size: 36px;
     padding: 4px 10px;
     border-radius: 5px;
     border: 2px solid #3fa9f4;
@@ -183,7 +215,7 @@ a.cl-link:hover {
 
 #cl-left a.cl-link {
     top: 105px;
-    left: 126px
+    left: 115px
 }
 
 #cl-up-left a.cl-link {
@@ -192,21 +224,16 @@ a.cl-link:hover {
 }
 /* sail animation */
 .cl-animated {
-    -webkit-animation-duration: 50s;
-    animation-duration: 50s;
+    -webkit-animation-duration: 45s;
+    animation-duration: 45s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    animation-iteration-count:infinite;
-    -webkit-animation-iteration-count:infinite
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite
 }
 
-@-webkit-keyframes shake {
-    0%, 100% {-webkit-transform: translateX(0)}
-    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-50px)}
-    20%, 40%, 60%, 80% {-webkit-transform: translateX(50px)}
-}
 @keyframes sail {
     0%, 100% {transform: translateX(0)}
     10%, 30%, 50%, 70%, 90% {transform: translateX(-50px)}
@@ -234,7 +261,6 @@ a.cl-link:hover {
         height: 740px
     }
 }
-
 
 /* animation delay */
 .delay05 {
