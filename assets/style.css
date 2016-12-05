@@ -122,7 +122,7 @@ a {
 /*******************************
         Cloud animation
 ********************************/
-.cl-container {
+#cl-container {
     max-width: 1170px;
     clear: both;
     margin: 0 auto
@@ -279,4 +279,24 @@ a.cl-link:hover {
 
 .delay20 {
     animation-delay: 4s
+}
+
+/*******************************
+        Extended cloud
+********************************/
+#ext-cl-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 585px;
+    background: url(../assets/images/cl-expand.png) no-repeat center;
+    background-size: contain
+}
+
+#ext-cl-container > div {
+    padding: 15px
+}
+
+#ext-cl-container h1 {
+    text-align: center;
+    color: #1d7af7
 }
