@@ -1,3 +1,10 @@
+//fixing the background's overlay of the hero -----------------------------------------------------------
+window.addEventListener('resize', function (e) {
+    'use strict';
+    document.getElementsByClassName('hero-overlay')[0].style.minHeight = window.innerHeight + 'px';
+});
+document.getElementsByClassName('hero-overlay')[0].style.minHeight = window.innerHeight + 'px';
+
 //inactivate the active class on hover -------------------------------------------------------------------
 document.getElementsByTagName('ul')[0].addEventListener('mouseover', function () {
     'use strict';
@@ -47,12 +54,7 @@ document.getElementById('image-frame').addEventListener('click', function (e) {
     e.stopPropagation();
 });
 
-//fixing the background's overlay of the hero -----------------------------------------------------------
-window.addEventListener('resize', function (e) {
-    'use strict';
-    document.getElementsByClassName('hero-overlay')[0].style.minHeight = window.innerHeight + 'px';
-});
-document.getElementsByClassName('hero-overlay')[0].style.minHeight = window.innerHeight + 'px';
+// 5 html onclick funtion for the corresponding cloud ---------------------------------------------------
 
 //phone menu --------------------------------------------------------------------------------------------
 function drop() {

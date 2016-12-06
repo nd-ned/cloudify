@@ -245,6 +245,7 @@ a.cl-link:hover {
 }
 
 .sail:hover {
+    -webkit-animation-play-state: paused;
     animation-play-state: paused
 }
 
