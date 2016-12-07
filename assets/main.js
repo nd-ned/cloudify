@@ -8,7 +8,7 @@ document.getElementsByClassName('hero-overlay')[0].style.minHeight = window.inne
 //inactivate the active class on hover -------------------------------------------------------------------
 document.getElementsByTagName('ul')[0].addEventListener('mouseover', function () {
     'use strict';
-    if (document.getElementsByName('active')[0] !== undefined) {
+    if (document.getElementsByClassName('active')[0] !== undefined) {
         document.getElementsByClassName('active')[0].className = 'inactive';
     }
 });
@@ -21,7 +21,7 @@ document.getElementsByTagName('ul')[0].addEventListener('mouseout', function () 
     }
 });
 
-//add active class
+//add active class on click
 document.getElementsByTagName('ul')[0].addEventListener('click', function (e) {
     'use strict';
     //remove the active class if exist
@@ -56,32 +56,53 @@ function conSwitch() {
 
 
 //highlight the nav menu link when the corresponding cloud button is clicked 
-document.getElementById('image-frame').addEventListener('click', function (e) {
+function navigate(e) {
     'use strict';
     //get the content of the clicked item
     var text = e.target.innerHTML,
         //get all links in the navigation
         links_tg = document.getElementsByClassName('site-nav')[0].getElementsByTagName('a'),
-        i;
+        i,
+        content = document.getElementById('ext-cl-container').querySelectorAll("#ext-cl-container > div");
     if (text) {
         //cheking for match
         for (i = 0; i < links_tg.length; i = i + 1) {
             if (text === links_tg[i].innerHTML) {
                 //remove the active class
-                document.getElementsByClassName('active')[0].className = '';
+                if (document.getElementsByClassName('inactive')[0] !== undefined) {
+                    document.getElementsByClassName('inactive')[0].className = '';
+                }
                 links_tg[i].parentElement.className = 'active';
-                conSwitch();
-                console.log(text);
+                //calling the corresponding container
+                if (!document.getElementById('cl-container').classList.contains('displayNone')) {
+                    conSwitch();
+                }
+                //and content
+                for (i = 0; i < content.length; i = i + 1) {
+                    if (!content[i].classList.contains('displayNone')) {
+                        content[i].classList.toggle('displayNone');
+                    }
+                }
                 document.getElementById(text).classList.toggle('displayNone');
             }
         }
     }
     e.stopPropagation();
-});
+}
+document.getElementById('image-frame').addEventListener('click', navigate, false);
+document.getElementsByTagName('ul')[0].addEventListener('click', navigate, false);
 
 
-
-
+//clear all active elements
+function home() {
+    'use strict';
+    if (document.getElementsByClassName('active')[0] !== undefined) {
+        document.getElementsByClassName('active')[0].classList.remove('active');
+    }
+    if (document.getElementById('cl-container').classList.contains('displayNone')) {
+        conSwitch();
+    }
+}
 
 //phone menu --------------------------------------------------------------------------------------------
 function drop() {
