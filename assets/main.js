@@ -8,7 +8,9 @@ document.getElementsByClassName('hero-overlay')[0].style.minHeight = window.inne
 //inactivate the active class on hover -------------------------------------------------------------------
 document.getElementsByTagName('ul')[0].addEventListener('mouseover', function () {
     'use strict';
-    document.getElementsByClassName('active')[0].className = 'inactive';
+    if (document.getElementsByName('active')[0] !== undefined) {
+        document.getElementsByClassName('active')[0].className = 'inactive';
+    }
 });
 
 //activate the inactive class
@@ -30,8 +32,28 @@ document.getElementsByTagName('ul')[0].addEventListener('click', function (e) {
         }
     }
     e.target.parentElement.className = 'active';
-    document.getElementsByClassName('inactive')[0].className = '';
+    if (document.getElementsByClassName('inactive')[0] !== undefined) {
+        document.getElementsByClassName('inactive')[0].className = '';
+    }
 });
+
+
+
+// container switcher ------------------------------------------------------------------------------------
+function conSwitch() {
+    'use strict';
+    var main = document.getElementById('cl-container'),
+        extend = document.getElementById('ext-cl-container');
+    if (!main.classList.contains('displayNone')) {
+        main.classList.toggle('displayNone');
+        extend.classList.toggle('displayNone');
+    } else {
+        extend.classList.toggle('displayNone');
+        main.classList.toggle('displayNone');
+    }
+}
+
+
 
 //highlight the nav menu link when the corresponding cloud button is clicked 
 document.getElementById('image-frame').addEventListener('click', function (e) {
@@ -48,13 +70,18 @@ document.getElementById('image-frame').addEventListener('click', function (e) {
                 //remove the active class
                 document.getElementsByClassName('active')[0].className = '';
                 links_tg[i].parentElement.className = 'active';
+                conSwitch();
+                console.log(text);
+                document.getElementById(text).classList.toggle('displayNone');
             }
         }
     }
     e.stopPropagation();
 });
 
-// 5 html onclick funtion for the corresponding cloud ---------------------------------------------------
+
+
+
 
 //phone menu --------------------------------------------------------------------------------------------
 function drop() {

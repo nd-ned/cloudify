@@ -11,6 +11,9 @@ a {
     outline: none
 }
 
+.displayNone {
+    display: none
+}
 /*******************************
             Navigation
 ********************************/

@@ -13,9 +13,9 @@
        
         <header class="site-header"><!-- Header start -->
             <nav class="site-nav">
-                    <a href="#"><img src="assets/images/white-cloudify.png" class="nav-logo" alt="#"></a>
+                    <a href="#" onclick="if (document.getElementById('cl-container').classList.contains('displayNone')) {conSwitch(); }"><img src="assets/images/white-cloudify.png" class="nav-logo" alt="#"></a>
                     <ul>
-                        <li><a id="active" href="#">Resources</a></li>
+                        <li><a href="#">Resources</a></li>
                         <li class="active"><a href="#">Solutions</a></li>
                         <li><a href="#">Features</a></li>
                         <li><a href="#">About</a></li>
@@ -33,7 +33,7 @@
         </header><!-- Header *** END-->
         
         
-                        <div id="cl-container" style="display: none">
+                        <div id="cl-container">
                             <div id="image-frame">
                                 <div class="cl-animated sail delay10" id="cl-top">
                                     <img src="assets/images/cl-top.png" alt="">
@@ -62,7 +62,7 @@
                         </div>
                         
                         
-                        <div id="ext-cl-container"><!-- Extended cloud container -->
+                        <div id="ext-cl-container" class="displayNone"><!-- Extended cloud container -->
                             <div id="Features"><!-- Extended features -->
                                 <h1>Features</h1>
                             </div><!-- Extended features end -->
