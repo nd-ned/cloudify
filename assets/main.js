@@ -55,8 +55,8 @@ function conSwitch() {
 
 
 
-//highlight the nav menu link when the corresponding cloud button is clicked 
-function navigate(e) {
+//highlight the nav menu link when the corresponding cloud button is clicked ------------------------------
+function navigat(e) {
     'use strict';
     //get the content of the clicked item
     var text = e.target.innerHTML,
@@ -64,6 +64,7 @@ function navigate(e) {
         links_tg = document.getElementsByClassName('site-nav')[0].getElementsByTagName('a'),
         i,
         content = document.getElementById('ext-cl-container').querySelectorAll("#ext-cl-container > div");
+
     if (text) {
         //cheking for match
         for (i = 0; i < links_tg.length; i = i + 1) {
@@ -89,12 +90,11 @@ function navigate(e) {
     }
     e.stopPropagation();
 }
-document.getElementById('image-frame').addEventListener('click', navigate, false);
-document.getElementsByTagName('ul')[0].addEventListener('click', navigate, false);
+document.getElementById('image-frame').addEventListener('click', navigat, false);
+document.getElementsByTagName('ul')[0].addEventListener('click', navigat, false);
 
 
-//clear all active elements
-function home() {
+function home() {//clear all active elements
     'use strict';
     if (document.getElementsByClassName('active')[0] !== undefined) {
         document.getElementsByClassName('active')[0].classList.remove('active');
