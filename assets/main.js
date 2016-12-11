@@ -104,6 +104,32 @@ function home() {//clear all active elements
     }
 }
 
+// form validation
+function mySubmit() {
+    "use strict";
+    var email = document.getElementById('email').value,
+        name = document.getElementById('name').value;
+    function validateName(name) {
+        return (/^[A-Za-z.']/).test(name);
+    }
+    function validateEmail(email) {
+        return (/\S+@\S+\.\S+/).test(email);
+    }
+    if (!validateName(name)) {
+        document.getElementById('name').value = '';
+        document.getElementById('name').placeholder = '*This field is required';
+        document.getElementById('name').className += " red";
+    }
+    if (!validateEmail(email)) {
+        document.getElementById('email').value = '';
+        document.getElementById('email').placeholder = '*This field is required0';
+        document.getElementById('email').className += " red";
+    }
+    if (validateName(name) && validateEmail(email)) {
+        document.forms["break"].submit();
+    }
+}
+
 //phone menu --------------------------------------------------------------------------------------------
 function drop() {
     'use strict';

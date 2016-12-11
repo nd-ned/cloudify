@@ -3,7 +3,7 @@
 ********************************/
 
 body {
-    font: 14px/20px 'Liberation Sans', 'Helvetica Neue', sans-serif;
+    font: 14px/20px 'monospace', 'Helvetica Neue', sans-serif;
     margin: 0
 }
 
@@ -30,6 +30,7 @@ a {
 .site-nav > ul {
     float: right;
     margin: 25px 15px;
+    padding: 0;
     list-style: none
 }
 
@@ -189,6 +190,7 @@ a.cl-link {
     text-decoration: none;
     position: relative;
     font-size: 36px;
+    font-family: sans-serif;
     padding: 4px 10px;
     border-radius: 5px;
     border: 2px solid #3fa9f4;
@@ -226,7 +228,7 @@ a.cl-link:hover {
     left: 102px
 }
 /* sail animation */
-.cl-animated {
+.cl-animate {
     -webkit-animation-duration: 45s;
     animation-duration: 45s;
     -webkit-animation-fill-mode: both;
@@ -297,10 +299,71 @@ a.cl-link:hover {
 }
 
 #ext-cl-container > div {
-    padding: 15px
+    padding: 20px
 }
 
 #ext-cl-container h1 {
     text-align: center;
     color: #1d7af7
+}
+
+
+/*******************************
+        Contact tab
+********************************/
+form {
+    width: 800px;
+    margin: 70px auto
+}
+
+#name, #email, #message {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: white;
+    border: 2px solid #1d7af7;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0
+}
+
+#name:focus, #email:focus, #message:focus {
+    border: 2px solid #3fa9f5
+}
+
+textarea {
+    height: 168px;
+    line-height: 150%;
+    resize: vertical
+}
+
+.submit {
+    text-align: center;
+    color: #fff;
+    background: #1d7af7;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    font-size:24px;
+    padding: 10px;
+    font-weight: 700
+}
+.submit:hover {
+    background:#3fa9f5
+}
+
+.red {
+    border-color: #dd0000;
+}
+
+.red:hover {
+    border-color: #dd0000
+}
+
+.red:focus {
+    border-color: red
 }

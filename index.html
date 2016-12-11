@@ -21,41 +21,34 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contacts</a></li>
                     </ul>
-                    <div onclick="drop()" class="dropbtn"></div>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a id="active" href="#">1Solutions</a>
-                        <a href="#">1Resources</a>
-                        <a href="#">1Features</a>
-                        <a href="#">1About</a>
-                        <a href="#">1Contacts</a>
-                    </div>
+
             </nav>     
         </header><!-- Header *** END-->
         
         
                         <div id="cl-container">
                             <div id="image-frame">
-                                <div class="cl-animated sail delay10" id="cl-top">
+                                <div class="cl-animate sail delay10" id="cl-top">
                                     <img src="assets/images/cl-top.png" alt="">
                                     <a class="cl-link" href="#">Features</a>
                                 </div>
-                                <div class="cl-animated sail delay15" id="cl-up-left">
+                                <div class="cl-animate sail delay15" id="cl-up-left">
                                     <img src="assets/images/cl-up-left.png" alt="">
                                     <a class="cl-link" href="#">Solutions</a>
                                 </div>
-                                <div class="cl-animated sail delay20" id="cl-left">
+                                <div class="cl-animate sail delay20" id="cl-left">
                                     <img src="assets/images/cl-left.png" alt="">
                                     <a class="cl-link" href="#">Resources</a>
                                 </div>
-                                <div class="cl-animated sail delay05" id="cl-up-right">
+                                <div class="cl-animate sail delay05" id="cl-up-right">
                                     <img src="assets/images/cl-up-right.png" alt="">
                                     <a class="cl-link" href="#">About</a>
                                 </div>
-                                <div class="cl-animated sail delay15" id="cl-right">
+                                <div class="cl-animate sail delay15" id="cl-right">
                                     <img src="assets/images/cl-right.png" alt="">
                                     <a class="cl-link" href="#">Contacts</a>
                                 </div>
-                                <div class="cl-animated sail" id="cl-logo" class="cl-animated sail">
+                                <div class="cl-animate sail" id="cl-logo" class="cl-animate sail">
                                     <img src="assets/images/cl-logo.png" alt="#">
                                 </div>
                             </div>
@@ -76,7 +69,17 @@
                                 <h1>About</h1>
                             </div><!-- Extended about end -->
                             <div id="Contacts" class="displayNone"><!-- Extended contacts -->
-                                <h1>Contacts</h1>
+                                <h1>Contact us</h1>
+                                
+                                
+                            <form action="#" method="post" id="break">      
+                                <input name="name" id="name" placeholder="Your name" type="text">   
+                                <input name="email" id="email" placeholder="Email" type="text">
+                                <textarea name="message" id="message" placeholder="Message" cols="42" rows="9"></textarea>
+                                <div onclick="mySubmit()" class="submit">SEND</div>
+                            </form>
+
+                                
                             </div><!-- Extended contacts end -->
                         </div><!-- Extended cloud container *** END -->
         </div> <!-- overlay *** END-->
