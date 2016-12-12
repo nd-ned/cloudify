@@ -118,12 +118,12 @@ function mySubmit() {
     if (!validateName(name)) {
         document.getElementById('name').value = '';
         document.getElementById('name').placeholder = '*This field is required';
-        document.getElementById('name').className += " red";
+        document.getElementById('name').className = "red";
     }
     if (!validateEmail(email)) {
         document.getElementById('email').value = '';
-        document.getElementById('email').placeholder = '*This field is required0';
-        document.getElementById('email').className += " red";
+        document.getElementById('email').placeholder = '*This field is required';
+        document.getElementById('email').className = "red";
     }
     if (validateName(name) && validateEmail(email)) {
         document.forms["break"].submit();
