@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>steak doner</title>
+</head>
+<body>
+  <!-- Header start-->
+   <div class="empty"></div>
+    <div class="container">
+        <header class="site-header">
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">loin</a></li>
+                    <li><a href="services.html">strip pancetta</a></li>
+                    <li><a href="fees.html">bierschinken pork</a></li>
+                    <li><a id="active" href="contacts.html">sausage</a></li>
+                </ul>
+                    <div onclick="drop()" class="dropbtn"></div>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="index.html">chicken</a>
+                        <a href="services.html">doner ribeye</a>
+                        <a href="fees.html">t-bone filet</a>
+                        <a id="active" href="contacts.html">capicola</a>
+                    </div>
+            </nav>
+                <div class="overflow"><div id="header-image"></div></div>
+            <h1 id="header">ribs</h1>
+            <p id="intro">t-bone ham-shank</p>
+                <img src="images/logo.png" id="logo" alt="">
+        </header>
+    </div>
+    <!-- Header end-->
+    <div class="clear"></div>
+<br>
+    <div id="content-wrapper">
+        <h1 id="logo-text-contact">chop</h1>
+        <div class="social-info">
+           <div class="icons">
+               <span class="adress"><img src="images/address.svg" alt="">ribs. bresaola ball tip (bresaola)
+                   loin. salami<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boudin bregenwurst short <br><br></span>
+               <span class="adress"><img src="images/phone.svg" alt="">sirloin: meatball/jerky<br><br></span>
+               <span class="adress"><img src="images/mobile.svg" alt="">spare: jerky short ribs<br><br></span>
+               <span class="adress"><img src="images/work.svg" alt="">pork belly: pork mignon andouille <br><br></span>
+            </div>
+                    <form action="contact.php" method="post" id="break">      
+                          <input name="name" type="text" id="name" class="feedback-input" placeholder="Име">   
+                          <input name="email" type="text" id="email" class="feedback-input" placeholder="Имейл">
+                          <input name="text" type="text" id="subject" class="feedback-input" placeholder="Тема">
+                          <textarea name="message" id="message" class="feedback-input" placeholder="Съобщение" cols="42" rows="9"></textarea>
+                        <div onclick="mySubmit()" class="submit">hamburger</div>
+                    </form> 
+        </div>
+        <div class="contact-form">
+           <div class="overlay" onClick="style.pointerEvents='none'"></div>
+               <div class="border">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76831.99662349698!2d-2.254345734327305!3d53.0023862660405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x52b74440480afc35!2sThe+Bacon+Shop!5e0!3m2!1sbg!2suk!4v1485712578336" width="100%" height="604" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+	<!-- Footer Start -->	
+    <footer class="site-footer">
+           <span class="footer-nav">
+               <ul>
+                   <li><a href="index.html">turkey</a></li>
+                   <li><a href="services.html">beef braunschweiger</a></li>
+                   <li><a href="fees.html">andouille pork</a></li>
+                   <li><a id="right" href="contacts.html">beef</a></li>
+               </ul>
+           </span>
+            <span class="footer-span">
+                Fullscreen <a target="_blank" href="#">Here</a>
+            </span>
+    </footer>
+    <!-- Footer end -->	
+    <script type="text/javascript" src="basic.js"></script>
+</body>
+</html>

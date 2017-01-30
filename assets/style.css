@@ -1,5 +1,5 @@
 /*******************************
-            Global
+            General
 ********************************/
 
 body {
@@ -307,6 +307,18 @@ a.cl-link:hover {
     color: #1d7af7
 }
 
+.ext-cl-content {
+    width: 1005px;
+    margin: 0 auto
+}
+
+iframe {
+    height: 450px;
+    resize: both;
+    overflow: auto;
+    border: 3px solid #8dbdff;
+    border-radius: 5px
+}
 
 /*******************************
         Contact tab
